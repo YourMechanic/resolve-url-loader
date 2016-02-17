@@ -133,7 +133,7 @@ function resolveUrlLoader(content, sourceMap) {
    * @param {object} stylesheet AST for the CSS output from SASS
    */
   function reworkPlugin(stylesheet) {
-    var URL_STATEMENT_REGEX = /(url\s*\()\s*(?:(['"])((?:(?!\2).)*)(\2)|([^'"](?:(?!\)).)*[^'"]))\s*(\))/g;
+    var URL_STATEMENT_REGEX = /(image_url\s*\(|url\s*\()\s*(?:(['"])((?:(?!\2).)*)(\2)|([^'"](?:(?!\)).)*[^'"]))\s*(\))/g;
 
     // visit each node (selector) in the stylesheet recursively using the official utility method
     //  each node may have multiple declarations
