@@ -186,6 +186,8 @@ function resolveUrlLoader(content, sourceMap) {
       function eachSplitOrGroup(token, i) {
         var BACKSLASH_REGEX = /\\/g;
 
+        if (token === "image_url(") return "url(";
+
         // we can get groups as undefined under certain match circumstances
         var initialised = token || '';
 
